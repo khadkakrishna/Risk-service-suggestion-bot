@@ -1,5 +1,68 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container-fluid">
+    <br>
+    <h4>Risk Settings</h4>
 
+    <p>Risk Policies: <a class="btn btn-sm btn-outline-primary" target="_blank" role="button">+</a></p>
+
+    <table class="table table-hover w-50">
+        <thead>
+          <tr>
+            <th scope="col">Policy Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Used by Authentication Class</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="material-icons">rule</span> Demo_RiskPolicy</td>
+            <td>Demo Policy</td>
+            <td>Demo_class</td>
+          </tr>
+          <tr>
+            <td><span class="material-icons">rule</span> CASB Policy Check</td>
+            <td>Check for Blacklisted IP's</td>
+            <td>CASB_Class</td>
+<!--            <td class="text-align: center;">-->
+<!--                <div class="form-check">-->
+<!--                    <input class="form-check-input" type="checkbox" checked>-->
+<!--                </div>-->
+<!--            </td>-->
+          </tr>
+          <tr>
+            <td><span class="material-icons">rule</span> Behavioural Analytics</td>
+            <td>User Interset Score to decide risk level</td>
+            <td>IntersetClass</td>
+<!--            <td class="text-align: center;">-->
+<!--                <div class="form-check">-->
+<!--                    <input class="form-check-input" type="checkbox" checked>-->
+<!--                </div>-->
+<!--            </td>-->
+          </tr>
+          <tr>
+            <td><span class="material-icons">rule</span> HeaderCheckPolicy</td>
+            <td>Check for Headers</td>
+            <td>-</td>
+<!--            <td class="text-align: center;">-->
+<!--                <div class="form-check">-->
+<!--                    <input class="form-check-input" type="checkbox" checked>-->
+<!--                </div>-->
+<!--            </td>-->
+          </tr>
+          <tr>
+            <td><span class="material-icons">rule</span> UserLoginTimeCheck</td>
+            <td>Check for users time of login</td>
+            <td>-</td>
+<!--            <td class="text-align: center;">-->
+<!--                <div class="form-check">-->
+<!--                    <input class="form-check-input" type="checkbox" checked>-->
+<!--                </div>-->
+<!--            </td>-->
+          </tr>
+        </tbody>
+      </table>
+      <a class="btn btn-outline-primary" href="/" role="button">Close</a>
+</div>
 
 {% endblock %}
