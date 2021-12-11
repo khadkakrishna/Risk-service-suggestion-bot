@@ -16,6 +16,9 @@ def policies():
 def rules(): 
     return render_template('rules.html')
 
+@app.route("/suggestions")
+def suggestions(): 
+    return render_template('suggestions.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

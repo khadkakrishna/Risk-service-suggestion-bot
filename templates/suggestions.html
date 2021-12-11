@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <br>
+    <h4>Advanced Risk Suggestions Settings</h4>
+    <label for="enableSuggestions">
+        <input type="checkbox" id="enableSuggestions" onclick="ShowHideDiv(this)" />
+        Enable the advanced suggestions for risk rules
+    </label>
+    <hr/>
+
+    <div id="divSuggestions" style="display: none">
+        Here comes the block for Suggestions
+    </div>
+    
+</div>
+
+<script type="text/javascript">
+    function ShowHideDiv(enableSuggestions) {
+        var divSuggestions = document.getElementById("divSuggestions");
+        divSuggestions.style.display = enableSuggestions.checked ? "block" : "none";
+        var btnSuggestions = document.getElementById("btnSuggestions");
+        btnSuggestions.style.display = enableSuggestions.checked ? "block" : "none"; 
+    }
+</script>
+
+{% endblock %}
