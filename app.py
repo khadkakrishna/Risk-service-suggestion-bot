@@ -16,9 +16,13 @@ def policies():
 def rules(): 
     return render_template('rules.html')
 
+file1 = open('data.dat', 'r')
+suggestions_demo = file1.readlines()
+print(suggestions_demo)
+
 @app.route("/suggestions")
 def suggestions(): 
-    return render_template('suggestions.html')
+    return render_template('suggestions.html', suggestions=suggestions_demo, suggestions_count=len(suggestions_demo))
 
 if __name__ == "__main__":
     app.run(debug=True)
